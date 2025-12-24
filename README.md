@@ -1,4 +1,3 @@
-# lab2
 
 ## Отчет по лабораторной работе № 2
 
@@ -29,11 +28,6 @@
 #### Данные на вход
 
 На вход программа должна получать 1 целые число - нулевой элемент последовательности, и 1 натуральное число - количество элементов последовательности.
-
-|              | Тип         | min значение    | max значение   |
-|--------------|-------------|-----------------|----------------|
-| a0 (Число 1) | Целое число | -10<sup>9</sup> | 10<sup>9</sup> |
-| n (Число 2)  | Целое число | 1               | 100            |
 
 #### Данные на выход
 
@@ -194,6 +188,42 @@ public class Main {
 ### 8. Задание 3 : Алгоритм
 
 ### 9. Задание 3 : Программа
+```java
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class Main {
+    public static Scanner in = new Scanner(System.in);
+    public static PrintStream out = System.out;
+
+    public static void main(String[] args) throws IOException {
+       char a = (char)System.in.read();
+       int add = 0;
+       int even = 0;
+
+       while ((int) a != '.') {
+           if (((int) a >= '0')&&((int) a <= '9')) {
+               if (((int) a - '0') % 2 == 0) {
+                   even++;
+               } else {
+                   add++;
+               }
+           }
+           a = (char)System.in.read();
+       }
+       if (add > even) {
+           out.print("add");
+       } else {
+           if (add == even) {
+               out.print("=");
+           } else {
+               out.print("even");
+           }
+       }
+    }
+}
+```
 
 ### 10. Задание 4 : Входные и выходные данные
 
