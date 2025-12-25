@@ -86,6 +86,10 @@ public static Scanner in = new Scanner(System.in);
         for (int i = 1; i < n + 1; i++) {
             out.print(a[i] + " ");
         }
+        if (max_d != 1)
+           out.println(max_d + " " + I + " " + Y);
+        else
+            out.print("NO");
     }
 }
 ```
